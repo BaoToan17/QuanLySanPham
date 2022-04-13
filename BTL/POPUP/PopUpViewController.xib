@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopUpViewController" customModule="BTL" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4P-yY-Ykr">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SP8-FA-Qr9">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain"/>
+                            <connections>
+                                <action selector="outButton:" destination="-1" eventType="touchUpInside" id="F9F-XF-86U"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Czm-UK-BnE">
+                            <rect key="frame" x="57" y="369" width="300" height="80"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvA-HK-EsT">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
+                                    <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                                    <state key="normal" title="0943 455 924" image="phone.fill" catalog="system">
+                                        <color key="titleColor" systemColor="linkColor"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="No3-jE-YJU"/>
+                                <constraint firstItem="hvA-HK-EsT" firstAttribute="leading" secondItem="Czm-UK-BnE" secondAttribute="leading" id="OIr-NT-pCK"/>
+                                <constraint firstItem="hvA-HK-EsT" firstAttribute="top" secondItem="Czm-UK-BnE" secondAttribute="top" id="aJN-M9-I1i"/>
+                                <constraint firstAttribute="bottom" secondItem="hvA-HK-EsT" secondAttribute="bottom" id="gpV-r2-0Ve"/>
+                                <constraint firstAttribute="trailing" secondItem="hvA-HK-EsT" secondAttribute="trailing" id="uO3-Ps-CbW"/>
+                                <constraint firstAttribute="width" constant="300" id="wMm-6A-7hl"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="SP8-FA-Qr9" firstAttribute="top" secondItem="G4P-yY-Ykr" secondAttribute="top" id="0rc-u7-5Rx"/>
+                        <constraint firstAttribute="bottom" secondItem="SP8-FA-Qr9" secondAttribute="bottom" id="45s-IX-lhT"/>
+                        <constraint firstItem="Czm-UK-BnE" firstAttribute="centerY" secondItem="G4P-yY-Ykr" secondAttribute="centerY" id="DwA-lL-ia6"/>
+                        <constraint firstItem="SP8-FA-Qr9" firstAttribute="leading" secondItem="G4P-yY-Ykr" secondAttribute="leading" id="WUU-GB-DAx"/>
+                        <constraint firstAttribute="trailing" secondItem="SP8-FA-Qr9" secondAttribute="trailing" id="wz0-hd-Ctr"/>
+                        <constraint firstItem="Czm-UK-BnE" firstAttribute="centerX" secondItem="G4P-yY-Ykr" secondAttribute="centerX" id="zdS-RI-tQC"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="G4P-yY-Ykr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8yj-yj-hB4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="G4P-yY-Ykr" secondAttribute="bottom" id="Txo-k0-3Uy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="G4P-yY-Ykr" secondAttribute="trailing" id="fBH-ao-AFl"/>
+                <constraint firstItem="G4P-yY-Ykr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hC0-ng-zzU"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
