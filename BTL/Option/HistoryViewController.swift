@@ -12,11 +12,15 @@ class HistoryViewController: UIViewController {
     @IBOutlet weak var HistorySearchBar: UISearchBar!
     
     @IBOutlet weak var historyCollection: UICollectionView!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Lịch sử"
-        
         historyCollection.delegate = self
         historyCollection.dataSource = self
         historyCollection.register(UINib(nibName: "CollectionViewCellTC2", bundle: nil), forCellWithReuseIdentifier: "historyCell")
@@ -25,7 +29,7 @@ class HistoryViewController: UIViewController {
 }
 extension HistoryViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout,UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return AppDelegate.historyData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

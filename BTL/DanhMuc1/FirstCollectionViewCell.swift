@@ -12,8 +12,7 @@ class FirstCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var nameOrderLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-//        self.backgroundColor = .brown
+
         self.clipsToBounds = true
         self.layer.cornerRadius = 12
         

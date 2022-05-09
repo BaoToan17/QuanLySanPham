@@ -37,7 +37,7 @@ class DM1ViewController: UIViewController {
         
         arrData = arrSP
         
-        navigationController?.navigationBar.tintColor = .blue
+        navigationController?.navigationBar.tintColor = .orange
         navigationController?.navigationBar.backgroundColor = .white
         
         productCollectionView.delegate = self
@@ -112,6 +112,7 @@ extension DM1ViewController: UICollectionViewDelegate,UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == productCollectionView {
             let PopVC = DetailsViewController()
+            AppDelegate.historyData.append(arrData[indexPath.row])
             navigationController?.pushViewController(PopVC, animated: true)
             
         }else {

@@ -12,11 +12,11 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//    title = "Tuỳ chọn"
-        
-        self.tabBar.tintColor = .brown
-        self.tabBar.barTintColor = .black
+        self.tabBar.tintColor = .orange
+        self.tabBar.barTintColor = .white
 
+        navigationItem.backButtonTitle = ""
+        navigationController?.navigationBar.tintColor = UIColor.orange
         let homeVC = trangChuViewController()
         homeVC.tabBarItem = UITabBarItem(title: "Trang chủ", image: UIImage(named: "icon_house"), selectedImage:UIImage(named: "icon_HouseSelected"))
         
@@ -24,9 +24,10 @@ class TabBarViewController: UITabBarController {
         let setting = optionViewController()
         self.viewControllers = [homeVC, setting]
         setting.tabBarItem = UITabBarItem(title: "Tuỳ chọn", image: UIImage(named: "Icon_TC"), selectedImage: UIImage(named: "Icon_TCSelected"))
-        
-
+    }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
 }

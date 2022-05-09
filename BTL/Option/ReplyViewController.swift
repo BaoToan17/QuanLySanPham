@@ -8,9 +8,8 @@
 import UIKit
 
 class ReplyViewController: UIViewController {
-    
-    @IBOutlet weak var commentsTextField: UITextField!
-    
+        
+    @IBOutlet weak var commentsTextView: UITextView!
     @IBOutlet weak var sendButton: UIButton!
     
     
@@ -18,9 +17,14 @@ class ReplyViewController: UIViewController {
         super.viewDidLoad()
 
         title = "Phản hồi"
-        
-        
-        commentsTextField.delegate = self
+        sendButton.clipsToBounds = true
+        sendButton.layer.cornerRadius = 20
+        commentsTextView.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     @IBAction func actionSent(_ sender: Any) {
@@ -34,8 +38,8 @@ class ReplyViewController: UIViewController {
     }
     
 }
-extension ReplyViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+extension ReplyViewController: UITextViewDelegate {
+    func textViewShouldReturn(_ textView: UITextView) -> Bool {
         view.endEditing(true)
     }
 }

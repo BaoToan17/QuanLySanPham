@@ -15,7 +15,6 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var pageCotrol: UIPageControl!
     
-    @IBOutlet weak var saveButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,11 +38,6 @@ class DetailsViewController: UIViewController {
         present(popUp, animated: true)
         
     }
-    
-    @IBAction func actionSave(_ sender: Any) {
-        
-    }
-    
     
 }
 extension DetailsViewController: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {

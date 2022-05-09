@@ -20,8 +20,6 @@ class TKViewController: UIViewController {
         super.viewDidLoad()
 
         title = "Tìm kiếm"
-        navigationController?.navigationBar.tintColor = .blue
-        navigationController?.navigationBar.backgroundColor = .gray
     }
 
 }

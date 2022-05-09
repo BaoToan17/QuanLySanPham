@@ -18,7 +18,8 @@ class SecondCollectionViewCellDM1: UICollectionViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        productImage.clipsToBounds = true
+        productImage.layer.cornerRadius = 12
     }
 
 }
