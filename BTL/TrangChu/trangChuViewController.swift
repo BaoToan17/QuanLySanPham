@@ -152,7 +152,7 @@ extension trangChuViewController: UICollectionViewDelegate,UICollectionViewDataS
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: self, action: nil)
         VC.title = arrDM[indexPath.row].name
         navigationController?.pushViewController(VC, animated: true)
-        //        present(VC, animated: true)
+        
     }
     
     
